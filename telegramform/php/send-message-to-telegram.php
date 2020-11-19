@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Формируем текст сообщения
         $txt = $name . $phone . $theme;
 
-        $sendTextToTelegram = file_get_contents("https://api.telegram.org/bot{1478887090:AAEIagKIziwjwcmbUtU_ZCRHCh_tfCDBfwY}/sendMessage?chat_id={-411301904}&parse_mode=html&text={$txt}");
+        $sendTextToTelegram = file_get_contents("https://api.telegram.org/bot1478887090:AAEIagKIziwjwcmbUtU_ZCRHCh_tfCDBfwY/sendMessage?chat_id={-411301904}&parse_mode=html&text={$txt}");
         if ($output && $sendTextToTelegram) {
             $msgs['okSend'] = 'Спасибо за отправку вашего сообщения!';
             echo json_encode($msgs);
